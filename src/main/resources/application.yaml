@@ -1,0 +1,25 @@
+spring:
+  #文件上传
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  #数据库配置
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&autoReconnect=true&characterEncoding=utf8
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+  freemarker:
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+
+#自定义端口号
+server:
+  port: 8088
+
+#文件上传存放目录
+upload:
+  directory: /tmp/
